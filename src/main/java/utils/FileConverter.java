@@ -42,7 +42,7 @@ public class FileConverter {
 	}
 	
 	
-	public static void convertToCanonocalFile(String fname, String dest) throws IOException {
+	public static void convertToTSVFile(String fname, String dest) throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(fname));
 		BufferedWriter bw = new BufferedWriter(new FileWriter(dest));
 		
@@ -100,7 +100,7 @@ public class FileConverter {
     }
 	
 	public static void main(String[] args) throws IOException {
-		convertToCanonocalFile("car.data", "car.tsv");
+		convertToTSVFile("car.data", "car.tsv");
 		convertToSequenceFile("car.tsv", "car.seq");
 	}	
 }
